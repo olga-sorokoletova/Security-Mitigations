@@ -13,7 +13,7 @@
 
 # Attack Vectors
 ## Taxonomy of Attack Vectors
-Taxonomy consists of 38 [atack vectors](https://github.com/olga-sorokoletova/Security-Mitigations/blob/main/Securing%20AI%20Model%20Weights/attack%20vectors.md) relevant for the objective of securing AI model weights[^3] and divided into 9 categories, including the *AI-Specific Attack Vectors* category.
+Taxonomy consists of 38 [attack vectors](https://github.com/olga-sorokoletova/Security-Mitigations/blob/main/Securing%20AI%20Model%20Weights/attack%20vectors.md) relevant for the objective of securing AI model weights[^3] and divided into 9 categories, including the *AI-Specific Attack Vectors* category.
 
 [^3]: **Attack vectors mentioned as relevant for other objectives:** 1. Training data poisoning; 2. Prompt injection unrelated to code execution.
 
@@ -32,7 +32,7 @@ Taxonomy consists of 38 [atack vectors](https://github.com/olga-sorokoletova/Sec
        
 ## Feasibility of AI-Specific Attack Vectors
 The image below represents assessments of the feasibility of each AI-specific attack vector from different categories of threat actors from 1 to 5.
-![Feasibility of AI-Specific Attack Vectors](https://github.com/olga-sorokoletova/Security-Mitigations/blob/main/Securing%20AI%20Model%20Weights/ai-specific%20attack%20vctors%20feasibility.png)
+![Feasibility of AI-Specific Attack Vectors](https://github.com/olga-sorokoletova/Security-Mitigations/blob/main/Securing%20AI%20Model%20Weights/ai-specific%20attack%20vectors%20feasibility.png)
 
 ## AI-Specific Security Mitigations
 
