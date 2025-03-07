@@ -1,5 +1,5 @@
 # Security Committments and Mitigations by providers of general-purpose AI models with Systemic Risk
-Based General-Purpose AI Code of Practice.
+Based on General-Purpose AI Code of Practice.
 
 ## What kind of security-related systemic risks we consider:
 - Possession of the unreleased weights,
