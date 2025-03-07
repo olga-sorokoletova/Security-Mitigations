@@ -42,6 +42,23 @@ Taxonomy of all[^5] security measures relevant for the objective of securing AI 
 [^6]: **Security Level 3 (SL3):** A system that can likely thwart cybercrime syndicates or insider threats (OC3), a Security Benchmark, referenced by General-Purpose AI Code of Practice as RAND SL3 benchmark that AI providers are committed to follow: *Signatories commit to implementing security mitigations designed to thwart attempts to obtain such weights and associated assets by highly motivated and well-resourced non-state actors, including insider threats, in
 line with the RAND SL3 benchmark*, Commitment 12. Security mitigations.
 
+### AI-Specific Security Mitigations (AI Model Resilience)
+- MODEL ROBUSTNESS
+  - 1. Input Reconstruction (Adding pre-prompt or random noise to the user prompt)
+  - 2. Adversarial Training (Adding adversarial examples to the training dataset)
+  - 3. Adversarial Input Detection (Classifier AI model that checks whether the user input is adversarial)
+  - 4. Adversarial Output Detection (Classifier AI model that checks whether the output is the result of malicious activity) 
+- ORACLE PROTECTION
+  - 5. Limitations on the number of inferences using the same credentials
+  - 6. Output Reconstruction (outputs are randomly modified after inference)
+  - 7. Constant inference time (so that computation running time doesn't depend on the weights' values) 
+
+# Insights from Expert Opinions
+
+**1. Confidential computing** (*Security During Transport and Use* section of SL4) $-$ a technique for securing data while in use by ensuring a hardware-based trusted execution environment (TEE), is used to secure the weights. The use of confidential computing in GPUs is still nascent and may not be production-ready, but it is an important remark because of an overwhelming consensus by experts regarding its importance. Because confidential computing is a broader paradigm that can be used for a variety of security goals, it is important that it is implemented to provide the model weights with sufficient confidentiality.
+
+**2. Model Extraction:** expert opinions vary widely in how plausible they think it is to infer the model weights from examining enough query responses, ranging from very easy to obviously infeasible. Clearly, more research is needed on this front.
+
 # Literature
 ### Reports of AI-Specific Attacks and Vulnerabilities
 - NVIDIA, “Product Security"
@@ -64,6 +81,20 @@ erine Lee, Matthew Jagielski, Milad Nasr, Arthur Conmy, et al., “Stealing Part
 - Subhabrata Mukherjee, Arindam Mitra, Ganesh Jawahar, Sahaj Agarwal, Hamid Palangi, and Ahmed Awadallah, “Orca: Progressive Learning from Complex Explanation Traces of GPT-4,” arXiv preprint 2306.02707, June 5, 2023
 - Will Knight, “A New Attack Impacts Major AI Chatbots—and No One Knows How to Stop It,” Wired, August 1, 2023
 - Florian Tramèr, Fan Zhang, Ari Juels, Michael K. Reiter, and Thomas Ristenpart, ”Stealing Machine Learning Models via Prediction APIs,” 25th USENIX Security Symposium, August 10–12, 2016
+
+### Referenced Security Frameworks
+- **NIST, The NIST Cybersecurity Framework 2.0**, NIST CSWP 29 (Initial Public Draft), August 8, 2023c
+- **MITRE ATT&CK** (MITRE, “ATT&CK”) and the **MITRE ATT&CK Enterprise Matrix** (MITRE, “ATT&CK—Enterprise Matrix”)
+- **MITRE, “ATLAS”**
+- Alina Oprea and Apostol Vassile, Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations, National Institute of Standards and Technology, NIST AI 100-2 E2023 (Initial Public Draft), March 8, 2023
+- BIML, “BIML Interactive Machine Learning Risk Framework”
+- Microsoft, “Failure Modes in Machine Learning,” November 2, 2022
+- International Society of Automation, “The World’s Only Consensus-Based Automation and Control Systems Cybersecurity Standards,” ISA-IEC 62443 Series of Standards
+- NIST, Security Requirements for Cryptographic Modules, Federal Information Processing Standards Publication 140-3, March 22, 2019
+- Supply-chain Levels for Software Artifacts
+---
+- Anthropic, “Anthropic’s Responsible Scaling Policy,” company announcement, September 18, 2023
+- OpenAI, Preparedness Framework (Beta), December 18, 2023
 
 
 
