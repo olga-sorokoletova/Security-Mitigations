@@ -13,7 +13,7 @@
 
 # Attack Vectors
 ### Taxonomy of Attack Vectors
-Taxonomy consists of 38 [attack vectors](https://github.com/olga-sorokoletova/Security-Mitigations/blob/main/Securing%20AI%20Model%20Weights/attack%20vectors.md) relevant for the objective of securing AI model weights[^3] and divided into 9 categories, including the *AI-Specific Attack Vectors* category.
+The taxonomy consists of 38 [attack vectors](https://github.com/olga-sorokoletova/Security-Mitigations/blob/main/Securing%20AI%20Model%20Weights/attack%20vectors.md) relevant to the objective of securing AI model weights[^3] and is divided into 9 categories, including the *AI-Specific Attack Vectors* category.
 
 [^3]: **Attack vectors mentioned as relevant for other objectives:** 1. Training data poisoning; 2. Prompt injection unrelated to code execution.
 
@@ -31,33 +31,32 @@ Taxonomy consists of 38 [attack vectors](https://github.com/olga-sorokoletova/Se
 [^4]: **ML Supply Chain:** 1. GPU hardware; 2. Data annotations; 3. Elements of the ML Software Stack; 4. Model.
        
 ### Feasibility of AI-Specific Attack Vectors
-The image below represents assessments of the feasibility of each AI-specific attack vector from different categories of threat actors from 1 to 5.
+The image below represents assessments of the feasibility of each AI-specific attack vector from different categories of threat actors, rated from 1 to 5.
 ![Feasibility of AI-Specific Attack Vectors](https://github.com/olga-sorokoletova/Security-Mitigations/blob/main/Securing%20AI%20Model%20Weights/ai-specific%20attack%20vectors%20feasibility.png)
 
 ### Security Mitigations
 ### Taxonomy of Security Measures
-Taxonomy of all[^5] security measures relevant for the objective of securing AI model weights across all Security Levels/Benchmarks (SL1-SL5)[^6] can be found in the source paper (***pp. 95, Appendix C, Table C.1: Summary of Security Measures Across Levels***). It is divided into 10 categories, including the *AI Model Resilience* category.
+The taxonomy of all[^5] security measures relevant to the objective of securing AI model weights across all Security Levels/Benchmarks (SL1-SL5)[^6] can be found in the source paper (***pp. 95, Appendix C, Table C.1: Summary of Security Measures Across Levels***). It is divided into 10 categories, including the *AI Model Resilience* category.
 
 [^5]: **Mitigations that are not included because they have little evidence of effectiveness, but they can be useful in some cases:** 1. Model Pruning; 2. Network Distillation.
-[^6]: **Security Level 3 (SL3):** A system that can likely thwart cybercrime syndicates or insider threats (OC3), a Security Benchmark, referenced by General-Purpose AI Code of Practice as RAND SL3 benchmark that AI providers are committed to follow: *Signatories commit to implementing security mitigations designed to thwart attempts to obtain such weights and associated assets by highly motivated and well-resourced non-state actors, including insider threats, in
-line with the RAND SL3 benchmark*, Commitment 12. Security mitigations.
+[^6]: **Security Level 3 (SL3):** A system that can likely thwart cybercrime syndicates or insider threats (OC3), a Security Benchmark, referenced by General-Purpose AI Code of Practice as RAND SL3 benchmark that AI providers are committed to follow: *Signatories commit to implementing security mitigations designed to thwart attempts to obtain such weights and associated assets by highly motivated and well-resourced non-state actors, including insider threats, in line with the RAND SL3 benchmark*, Commitment 12. Security mitigations.
 
 ### AI-Specific Security Mitigations (AI Model Resilience)
 - MODEL ROBUSTNESS
-  - 1. Input Reconstruction (Adding pre-prompt or random noise to the user prompt)
+  - 1. Input Reconstruction (Adding a pre-prompt or random noise to the user prompt)
   - 2. Adversarial Training (Adding adversarial examples to the training dataset)
   - 3. Adversarial Input Detection (Classifier AI model that checks whether the user input is adversarial)
   - 4. Adversarial Output Detection (Classifier AI model that checks whether the output is the result of malicious activity) 
 - ORACLE PROTECTION
   - 5. Limitations on the number of inferences using the same credentials
-  - 6. Output Reconstruction (outputs are randomly modified after inference)
-  - 7. Constant inference time (so that computation running time doesn't depend on the weights' values) 
+  - 6. Output Reconstruction (Outputs are randomly modified after inference)
+  - 7. Constant inference time (So that computation running time doesn't depend on the weights' values) 
 
 # Insights from Expert Opinions
 
-**1. Confidential computing** (*Security During Transport and Use* section of SL4) $-$ a technique for securing data while in use by ensuring a hardware-based trusted execution environment (TEE), is used to secure the weights. The use of confidential computing in GPUs is still nascent and may not be production-ready, but it is an important remark because of an overwhelming consensus by experts regarding its importance. Because confidential computing is a broader paradigm that can be used for a variety of security goals, it is important that it is implemented to provide the model weights with sufficient confidentiality.
+**1. Confidential computing** (*Security During Transport and Use* section of SL4) $-$ a technique for securing data while in use by ensuring a hardware-based trusted execution environment (TEE), is used to secure the weights. The use of confidential computing in GPUs is still nascent and may not be production-ready, but it is an important remark because of the overwhelming consensus among experts regarding its importance. Because confidential computing is a broader paradigm that can be used for a variety of security goals, it is important that it is implemented to provide the model weights with sufficient confidentiality.
 
-**2. Model Extraction:** expert opinions vary widely in how plausible they think it is to infer the model weights from examining enough query responses, ranging from very easy to obviously infeasible. Clearly, more research is needed on this front.
+**2. Model Extraction:** expert opinions vary widely on how plausible they think it is to infer the model weights from examining enough query responses, ranging from very easy to obviously infeasible. Clearly, more research is needed on this front.
 
 # Literature
 ### Reports of AI-Specific Attacks and Vulnerabilities
