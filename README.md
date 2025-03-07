@@ -117,5 +117,6 @@ Based on General-Purpose AI Code of Practice.
 - SoTA for a secure model copying and versioning,
 - Research on what can be "more" in each of the lists.
 
-## Next step:
-- Study "Securing AI Model Weights: Preventing Theft and Misuse of Frontier Models".
+## Research steps:
+- ~~Study "Securing AI Model Weights: Preventing Theft and Misuse of Frontier Models"~~: Result: [Securing AI Model Weights](https://github.com/olga-sorokoletova/Security-Mitigations/tree/main/Securing%20AI%20Model%20Weights).
+- TBD: NIST 800-53 or references from Secuting AI Model Weights.
