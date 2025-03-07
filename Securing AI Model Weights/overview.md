@@ -1,3 +1,7 @@
+# Source
+
+[Securing AI Model Weights: Preventing Theft and Misuse of Frontier Models](https://github.com/olga-sorokoletova/Security-Mitigations/blob/main/Securing%20AI%20Model%20Weights/paper.pdf)
+
 # Scope
 
 **Objective:** Securing model assets.[^1]\
