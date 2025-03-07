@@ -13,19 +13,51 @@
 
 # Attack Vectors
 ## Taxonomy of Attack Vectors
-Taxonomy consists of 38 [atack vectors](https://github.com/olga-sorokoletova/Security-Mitigations/blob/main/Securing%20AI%20Model%20Weights/attack%20vectors.md) relevant for the objective of securing AI model weights and divided into 9 categories, including the *AI-Specific Attack Vectors* category.
+Taxonomy consists of 38 [atack vectors](https://github.com/olga-sorokoletova/Security-Mitigations/blob/main/Securing%20AI%20Model%20Weights/attack%20vectors.md) relevant for the objective of securing AI model weights[^3] and divided into 9 categories, including the *AI-Specific Attack Vectors* category.
+
+[^3]: **Attack vectors mentioned as relevant for other objectives:** 1. Training data poisoning; 2. Prompt injection unrelated to code execution.
 
 ## AI-Specific Attack Vectors
 **AI-Specific Attack Vectors** $-$ attacks that target AI infrastructure and are only relevant for AI systems:
 - AIMED AT CODE EXECUTION
   - 1. Discovering Existing Vulnerabilities in the Machine Learning Stack
-  - 2. Intentional Machine Learning Supply Chain Compromise  
+  - 2. Intentional Machine Learning Supply Chain[^4] Compromise  
 - MANIPULATING MODEL OUTPUTS
   - 3. Prompt-Triggered Code Execution (Prompt Injection)
 - MODEL DERIVATION
   - 4. Model Extraction
   - 5. Model Distillation
    
+[^4]: **ML Supply Chain:** 1. GPU hardware; 2. Data annotations; 3. Elements of the ML Software Stack; 4. Model.
+       
+## Feasibility of AI-Specific Attack Vectors
+The image below represents assessments of the feasibility of each AI-specific attack vector from different categories of threat actors from 1 to 5.
+![Feasibility of AI-Specific Attack Vectors](https://github.com/olga-sorokoletova/Security-Mitigations/blob/main/Securing%20AI%20Model%20Weights/ai-specific%20attack%20vctors%20feasibility.png)
+
+## AI-Specific Security Mitigations
+
+# Literature
+## Reports of AI-Specific Attacks and Vulnerabilities
+- NVIDIA, “Product Security"
+- NIST, “CVE-2023-7018 Detail,” National Vulnerability Database, last modified December 29, 2023d
+- Oligo, “ShellTorch”
+- Fred Bals, “CVE-2017-5638: The Apache Struts Vulnerability Explained,” Synopsys, September 13, 2017
+- Sead Fadilpašić, “PyTorch Hit by Severe Security Compromise,” TechRadar, January 3, 2023
+- Shweta Sharma, “Frequent Critical Flaws Open MLFlow Users to Imminent Threats,” CSO, January 18, 2024
+- NIST, 2023d (Code execution vulnerability in Hugging-Face’s Transformers)
+- TensorFlow, “Using TensorFlow Securely,” GitHub
+- MITRE, “Compromised PyTorch Dependency Chain,” incident date of December 25, 2022b
+- MITRE, “Arbitrary Code Execution with Google Colab,” incident date of July 2022a
+- Avi Lumelsky, Guy Kaplan, and Gal Ebaz, “ShadowRay: First Known Attack Campaign Targeting AI Workloads Actively Exploited in the Wild,” Oligo, March 26, 2024
+- MITRE, “Achieving Code Execution in MathGPT via Prompt Injection,” incident date of January 28, 2023
+- Rich Harang, “Securing LLM Systems Against Prompt Injection,” NVIDIA, blog post, August 3, 2023
+- Nicholas Carlini, Daniel Paleka, Krishnamurthy Dvijotham, Thomas Steinke, Jonathan Hayase, A. Feder Cooper, Kath-
+erine Lee, Matthew Jagielski, Milad Nasr, Arthur Conmy, et al., “Stealing Part of a Production Language Model.” arXiv, arXiv:2403.06634, March 11, 2024
+- Microsoft Azure (azure), “counterfit,” GitHub: "model inversion" for Model Extraction and "functional extraction" for Model Distillation
+- Billy Brumley, A3/A8 & COMP128, T-79.514 ”Special Course on Cryptology,” Helsinki University of Technology, November 11. 2004
+- Subhabrata Mukherjee, Arindam Mitra, Ganesh Jawahar, Sahaj Agarwal, Hamid Palangi, and Ahmed Awadallah, “Orca: Progressive Learning from Complex Explanation Traces of GPT-4,” arXiv preprint 2306.02707, June 5, 2023
+- Will Knight, “A New Attack Impacts Major AI Chatbots—and No One Knows How to Stop It,” Wired, August 1, 2023
+- Florian Tramèr, Fan Zhang, Ari Juels, Michael K. Reiter, and Thomas Ristenpart, ”Stealing Machine Learning Models via Prediction APIs,” 25th USENIX Security Symposium, August 10–12, 2016
 
 
 
